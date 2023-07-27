@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form</title>
+        <link href="style2.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;" >
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="email" id="email" placeholder="Enter your Email ID" required>
+                <input type="text" id="phone" placeholder="Phone No." required>
+                <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <!--<script>
+            function sendEmail(){
+                Email.send({
+                Host : "smtp.gmail.com",
+                Username : "email",
+                Password : "pass",
+                To : 'email',
+                From : document.getElementById("email").value,
+                Subject : "New contact form enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+            }-->
+
+        </script>
+    </body>
+</html>

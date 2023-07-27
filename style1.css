@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+}
+header{
+    width:100%;
+    height: 100%;
+    background-color: pink;
+}
+.must{
+    width:100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width:85%;
+    margin:auto;
+    padding:35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin:0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.navbar ul li::after{
+    content:" ";
+    height:3px;
+    width:0px;
+    background-color: rgb(4, 154, 94);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%;
+}
+/*if need to diplay photo in single row use this
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}*/
+.place-must{
+    color: #f1ffe6;
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top:50px ;
+    
+}
+.place-must h3{
+    font-size: 150px;
+    color:#fff;
+      }
+.phto-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.phto-col img{
+    width:100%;
+    display:block;
+    height: 100%;
+}
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(4, 143, 67,0.7);
+}
+.layer h3{
+    width:100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 50px;
+    bottom: 0;
+    top:30%;
+    left: 10px;
+    transform: translateY(-30%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom:49%;
+    opacity: 1;
+}
+.layer p{
+    color: white;
+    width:100%;
+    font-weight: 100;
+    font-size: 20px;
+    bottom: 0;
+    left:10px;
+    transform:translateY(-50%);
+    position:absolute;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+.layer:hover p{
+    bottom: 40%;
+    opacity: 1;
+}
